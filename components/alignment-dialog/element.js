@@ -1,6 +1,5 @@
 // @ts-check
 import { template, attributes } from "./index.js";
-import AudioDataModel from "../../models/AudioDataModel.js";
 
 /**
  * @class AlignmentDialog

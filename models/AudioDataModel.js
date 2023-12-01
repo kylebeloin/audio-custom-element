@@ -80,7 +80,17 @@ class AudioDataModel {
    * @param {WhisperData} data - The audio data.
    */
   constructor(data) {
-    this.filename = data.wav;
+    if (!AudioDataModel.validate(data)) {
+      console.error(
+        "Invalid data. Expected data to have the following properties:  wav, whisperx_text, whisperx_alignment",
+        `\n\nfilename (wav): ${data?.wav}`,
+        `\n\ntext (whisperx_text): ${data?.whisperx_text}`,
+        `\n\nalignment (whisperx_alignment):`,
+        data?.whisperx_alignment
+      );
+    }
+
+    this.filename = data?.wav;
     this.text = data.whisperx_text;
     this.alignment = data.whisperx_alignment.map(
       AudioDataModel.createAlignment
@@ -94,6 +104,19 @@ class AudioDataModel {
         this.alignment.pop();
       }
     }
+  }
+
+  /**
+   * @param {WhisperData} data - The audio data.
+   * @returns {boolean} - Whether the audio data is valid.
+   */
+  static validate(data) {
+    return (
+      data?.whisperx_text !== undefined &&
+      data?.whisperx_alignment !== undefined &&
+      data?.whisperx_alignment?.length > 0 &&
+      data?.wav !== undefined
+    );
   }
 
   /**

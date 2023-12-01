@@ -1,3 +1,5 @@
+// @ts-check
+
 import { mock } from "../mock/mock.js";
 import AudioDataModel from "../models/AudioDataModel.js";
 
@@ -12,6 +14,7 @@ export class DataService {
       return data;
     });
     return data;
+    // IMPLEMENT HERE!
 
     // const formData = new FormData();
     // audio.forEach((blob) => formData.append("audio", blob));
