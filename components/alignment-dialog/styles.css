@@ -1,0 +1,41 @@
+:host {
+  display: grid;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+:host [name="dialog-content"] {
+  display: block;
+  padding: 1rem;
+  background-color: white;
+  cursor: default;
+}
+
+:host [name="dialog"].hide {
+  animation: fade-out 0.25s ease-out forwards;
+  pointer-events: none;
+}
+
+:host [name="dialog"].show {
+  animation: fade-in 0.25s ease-in;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}

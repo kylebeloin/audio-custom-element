@@ -1,0 +1,55 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+main {
+  display: grid;
+  place-content: center;
+  margin: 1rem;
+}
+
+:root {
+  --blue-1: #e3f2fd;
+  --blue-2: #bbdefb;
+  --blue-3: #90caf9;
+  --blue-4: #64b5f6;
+  --blue-5: #42a5f5;
+  --blue-6: #2196f3;
+  --blue-7: #1e88e5;
+
+  --green-1: #e8f5e9;
+  --green-2: #c8e6c9;
+  --green-3: #a5d6a7;
+  --green-4: #81c784;
+  --green-5: #66bb6a;
+  --green-6: #4caf50;
+  --green-7: #43a047;
+
+  --red-1: #ffebee;
+  --red-2: #ffcdd2;
+  --red-3: #ef9a9a;
+  --red-4: #e57373;
+  --red-5: #ef5350;
+  --red-6: #f44336;
+  --red-7: #e53935;
+
+  --yellow-1: #fffde7;
+  --yellow-2: #fff9c4;
+  --yellow-3: #fff59d;
+  --yellow-4: #fff176;
+  --yellow-5: #ffee58;
+  --yellow-6: #ffeb3b;
+  --yellow-7: #fdd835;
+}

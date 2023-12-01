@@ -1,0 +1,30 @@
+:host [name] {
+  display: none;
+}
+
+:host [name="data"] {
+  display: inline-block;
+}
+
+:host [name="audio"] {
+  display: inline-block;
+}
+
+:host :where([stopped], [paused]) + .controls [name="record"] {
+  display: inline-block;
+}
+
+:host :where([recording]) + .controls [name="stop"] {
+  display: inline-block;
+}
+
+:host .button {
+  cursor: pointer;
+}
+
+:host .controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}

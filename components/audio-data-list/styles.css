@@ -1,0 +1,8 @@
+:host-context(:where([state="stopped"], [state="paused"]))
+  :where([name="play"], [slot="play"]) {
+  display: inline-block;
+}
+
+:host-context([state="playing"]) :where([name="stop"], [slot="stop"]) {
+  display: inline-block;
+}
