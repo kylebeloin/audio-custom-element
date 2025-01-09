@@ -1,18 +1,7 @@
 const template = document.createElement("template");
 template.innerHTML = `
     <style>
-    :host [name="alignment-items"] {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 100vw;
-    }
-    
-    :host .audio-player-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 1rem;
-    }
+        @import "./components/audio-data-element/styles.css";
     </style>
     <div class="audio-player-container">
         <audio controls></audio>

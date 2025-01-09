@@ -11,9 +11,7 @@ export class AudioDataElement extends HTMLElement {
   /**
    * @returns {Array<string>} The observed attributes.
    */
-  static get observedAttributes() {
-    return Object.values(attributes);
-  }
+  static observedAttributes = Object.values(attributes);
 
   /**
    * @type {import('../../models/AudioDataModel.js').AudioData|null} - data
